@@ -33,7 +33,7 @@ class Installer extends LibraryInstaller
     	echo "test installer update\n";
     }
 
-	public function install(Composer $composer, IOInterface $io)
+	public function install(Composer\Repository\InstalledRepositoryInterface $repo, Composer\Package\PackageInterface $package)
     {
     	echo "test installer install\n";
     }
