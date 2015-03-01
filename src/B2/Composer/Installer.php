@@ -30,7 +30,7 @@ class Installer extends LibraryInstaller
 //        $composer->getInstallationManager()->addInstaller($installer);
     }
 
-	public function update(Composer $composer, IOInterface $io)
+	public function update(InstalledRepositoryInterface $repo, PackageInterface $initial, PackageInterface $target)
     {
     	echo "test installer update\n";
     }
