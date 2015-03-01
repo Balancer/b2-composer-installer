@@ -11,7 +11,7 @@ class Installer extends LibraryInstaller
 	public function supports($packageType)
 	{
 		echo "test installer support '$packageType'\n";
-		return 'bors-component' === $packageType;
+		return 'bors-component' == $packageType;
 	}
 
     public static function postAutoloadDump(Event $event)
@@ -26,5 +26,15 @@ class Installer extends LibraryInstaller
     	echo "test installer activate\n";
 //        $installer = new TemplateInstaller($io, $composer);
 //        $composer->getInstallationManager()->addInstaller($installer);
+    }
+
+	public function update(Composer $composer, IOInterface $io)
+    {
+    	echo "test installer update\n";
+    }
+
+	public function install(Composer $composer, IOInterface $io)
+    {
+    	echo "test installer install\n";
     }
 }

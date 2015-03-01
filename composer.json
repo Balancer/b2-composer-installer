@@ -20,5 +20,10 @@
 
 	"extra": {
 		"class": "B2\\Composer\\Installer"
+	},
+
+	"require": {
+		"composer-plugin-api": "1.0.0"
 	}
+
 }
