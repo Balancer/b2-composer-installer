@@ -38,5 +38,6 @@ class Installer extends LibraryInstaller
 	public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
     	echo "test installer install\n";
+    	return parent::install($repo, $package);
     }
 }
