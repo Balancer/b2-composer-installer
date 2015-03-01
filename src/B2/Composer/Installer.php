@@ -5,6 +5,8 @@ namespace B2\Composer;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Installer\LibraryInstaller;
+use Composer\Repository\InstalledRepositoryInterface;
+use Composer\Package\PackageInterface;
 
 class Installer extends LibraryInstaller
 {
@@ -33,7 +35,7 @@ class Installer extends LibraryInstaller
     	echo "test installer update\n";
     }
 
-	public function install(Composer\Repository\InstalledRepositoryInterface $repo, Composer\Package\PackageInterface $package)
+	public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
     	echo "test installer install\n";
     }
