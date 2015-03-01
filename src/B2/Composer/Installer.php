@@ -2,13 +2,15 @@
 
 namespace B2\Composer;
 
+use Composer\Composer;
+use Composer\IO\IOInterface;
 use Composer\Installer\LibraryInstaller;
 
 class Installer extends LibraryInstaller
 {
 	public function supports($packageType)
 	{
-		echo "test installer '$packageType'\n";
+		echo "test installer support '$packageType'\n";
 		return 'bors-component' === $packageType;
 	}
 
@@ -18,4 +20,11 @@ class Installer extends LibraryInstaller
         $io = $event->getIO();
         $io->write('<info>Test: postAutoloadDump</info>');
 	}
+
+	public function activate(Composer $composer, IOInterface $io)
+    {
+    	echo "test installer activate\n";
+//        $installer = new TemplateInstaller($io, $composer);
+//        $composer->getInstallationManager()->addInstaller($installer);
+    }
 }
